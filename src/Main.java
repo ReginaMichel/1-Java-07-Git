@@ -42,7 +42,7 @@ public class Main {
         System.out.println();
 
         String emptyDay = "   ";
-        for (int i = 1; i < dayCounter%7; i++) {
+        for (int i = 0; i < (dayCounter-1)%7; i++) {
             System.out.print(emptyDay);
         }
         for (int dayInMonth = 1; dayInMonth <= daysPerMonth[month]; dayInMonth++) {
