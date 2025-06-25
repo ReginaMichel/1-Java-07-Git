@@ -16,7 +16,8 @@ public class Main {
         System.out.print("Bitte geben Sie das gewünschte Jahr als vierstellige Zahl ein:");
         String entry = userEntries.nextLine();
         int year = Integer.parseInt(entry);
-        System.out.println(year);
+        System.out.println();
+        System.out.println("        " + year);
 
         // get day of week of January 1st
         Calendar calendar = Calendar.getInstance();
@@ -37,6 +38,11 @@ public class Main {
     }
 
     public static int printMonth(int month, int dayCounter) {
+        String monthName = months[month];
+        for (int i=(20-monthName.length())/2; i > 0; i--) {
+            System.out.print(" ");
+        }
+
         System.out.println(months[month]);
         printWeekDays();
         System.out.println();
