@@ -25,7 +25,8 @@ public class Main {
 
         int dayCounter = dayOfWeek;
         for (int i = 0; i < 12; i++){
-            printMonth(i);
+            printMonth(i, dayCounter);
+            System.out.println();
         }
     }
 
@@ -33,13 +34,21 @@ public class Main {
         for (int i = 0; i < 7; i++) {
             System.out.print(daysOfWeek[i] + " ");
         }
-        System.out.println();
     }
 
-    public static void printMonth(int month) {
+    public static void printMonth(int month, int dayCounter) {
         System.out.println(months[month]);
         printWeekDays();
         System.out.println();
 
+        String emptyDay = "   ";
+        for (int i = 1; i < dayCounter%7; i++) {
+            System.out.print(emptyDay);
+        }
+        for (int dayInMonth = 1; dayCounter <= daysPerMonth[month]; dayInMonth++) {
+            if (dayInMonth < 10) {System.out.print(" ");}
+            System.out.print(dayInMonth + " ");
+            dayCounter++;
+        }
     }
 }
