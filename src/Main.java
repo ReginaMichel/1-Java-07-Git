@@ -51,6 +51,7 @@ public class Main {
             if (dayCounter % 7 == 0) {
                 System.out.println();
             }
+
             dayCounter++;
 
         }
