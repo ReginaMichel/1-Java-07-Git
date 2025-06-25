@@ -54,6 +54,7 @@ public class Main {
             dayCounter++;
 
         }
+
         System.out.println();
         return dayCounter;
     }
