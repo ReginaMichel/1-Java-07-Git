@@ -25,6 +25,5 @@ public class Main {
         Calendar calendar = Calendar.getInstance();
         calendar.set(year, Calendar.JANUARY,5);
         int dayOfWeek = calendar.get(Calendar.DAY_OF_WEEK);
-        switch dayOfWeek
     }
 }
